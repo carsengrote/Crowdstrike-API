@@ -1,5 +1,6 @@
 from falconpy import Detects
 from datetime import datetime, timedelta, timezone
+import os.path
 import sys
 import smtplib
 
@@ -62,7 +63,11 @@ def sendMail(detectDict, actionsList):
 def getDetections(secondsDelta, minutesDelta, daysDelta):
 
     # Open file of past detections and read in as list
-    detectionsFile = open("detectionIds.txt", "r+")
+    if (os.path.exists("detectionIds.txt")):
+        detectionsFile = open("detectionIds.txt", "r+")
+    else:
+        detectionsFile = open("detectionIds.txt", "w+")
+        
     line = detectionsFile.readline()
     oldId = " "
     if line.find("$") != -1:
