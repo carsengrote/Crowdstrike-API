@@ -1,2 +1,2 @@
 # CrowdstrikeAPI
-Scripts for utilizing the Crowdstrike API for various tasks
+Scripts for utilizing the Crowdstrike Falcon API for various tasks
