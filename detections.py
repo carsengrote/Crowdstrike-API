@@ -6,7 +6,7 @@ import smtplib
 
 def sendMail(detectDict, actionsList):
 
-    FROM = 'carsen.grote@psc.com'
+    FROM = 'carsen.grote@'
     TO = ["----------"]
     SUBJECT = "CrowdStrike Detection for " + detectDict["user_name"]
 
